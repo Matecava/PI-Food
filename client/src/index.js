@@ -7,10 +7,10 @@ import {Provider} from 'react-redux'
 import {store} from './store'
 import {BrowserRouter as Router} from 'react-router-dom'
 import axios from "axios";
-import dotenv from "dotenv";
-dotenv.config();
+// import dotenv from "dotenv";
+// dotenv.config();
 
-axios.defaults.baseURL = "https://pi-food-production-03f3.up.railway.app";
+// axios.defaults.baseURL = "https://pi-food-production-03f3.up.railway.app";
 
 ReactDOM.render(
   <Provider store={store}>
