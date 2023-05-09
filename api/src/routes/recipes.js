@@ -62,7 +62,7 @@ router.get('/:idReceta',async(req,res,next)=>{
     const id = req.params.idReceta
     try {
         if(id.length < 15){
-            const resuApi = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`)
+            const resuApi = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=634431ae1e86424a873863124f0051f3`)
             if(resuApi){
                 const receta = {
                     id: resuApi.data.id,
