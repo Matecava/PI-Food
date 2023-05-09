@@ -11,7 +11,7 @@ export function getAllRecipes(){
 }
 export function getAllDiets(){
     return async function(dispatch){
-        const resu =  await axios('https://pi-food-production-03f3.up.railway.app/types')
+        const resu =  await axios.get('https://pi-food-production-03f3.up.railway.app/types')
         dispatch({
             type: "GET_ALL_DIETS",
             payload: resu.data
@@ -20,7 +20,7 @@ export function getAllDiets(){
 }
 export function getRecipesByName(name){
     return async function(dispatch){
-        const resu =  await axios(`https://pi-food-production-03f3.up.railway.app/recipes?name=${name}`)
+        const resu =  await axios.get(`https://pi-food-production-03f3.up.railway.app/recipes?name=${name}`)
         dispatch({
             type: "GET_RECIPES_BY_NAME",
             payload: resu.data
@@ -29,7 +29,7 @@ export function getRecipesByName(name){
 }
 export function getRecipesById(id){
     return async function(dispatch){
-        const resu =  await axios(`https://pi-food-production-03f3.up.railway.app/recipes/${id}`)
+        const resu =  await axios.get(`https://pi-food-production-03f3.up.railway.app/recipes/${id}`)
         dispatch({
             type: "GET_RECIPES_BY_ID",
             payload: resu.data
